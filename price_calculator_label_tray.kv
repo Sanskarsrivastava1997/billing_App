@@ -1,0 +1,320 @@
+<label_tray>:
+
+
+
+
+    t1:t1
+    t2:t2
+    t3:t3
+    t4:t4
+    l1:l1
+    l2:l2
+    l3:l3
+    l4:l4
+    bx:bx
+    bd1:bd1
+
+
+    save1:save1
+
+
+
+    Button:
+        text:"Bill Calculator"
+        border : 0, 0, 0, 0
+        background_normal : 'b9.png'
+        background_down :'b9.png'
+        color: (0, 0, 0,1)
+        size:0,20
+        font_size:0.7*self.height
+        size_hint_y:.1
+        font_name:'Arial'
+
+    Label:
+        canvas:
+            Color:
+                rgb :1,1,1,1
+            Rectangle:
+                pos:self.pos
+                size:self.size
+        size_hint_y:None
+        size:0,1
+
+
+
+
+
+
+    Label:
+        canvas:
+            Color:
+                rgb :.3,.3,.3,.5
+            Rectangle:
+                pos:self.pos
+                size:self.size
+        size_hint_y:None
+        size:0,2
+
+
+
+
+    GridLayout:
+        cols:2
+        size:0,120
+        size_hint_y:.4
+
+
+        TextInput:
+            id:t1
+            multiline:False
+            font_size: 0.5*self.height
+            size:0,20
+            size_hint_y:.3
+            hint_text:"Product Name:"
+            background_color:(0,0,0,1)
+            outline_color: (0, 0, 0, 1)
+            foreground_color: (1, 1, 1, 1)
+
+
+
+
+
+        TextInput:
+            id:t2
+            multiline:False
+            font_size: 0.5*self.height
+            input_filter:"int"
+            size:0,20
+            size_hint_y:.3
+            hint_text:"Price:"
+            background_color:(0,0,0,1)
+            outline_color: (0, 0, 0, 1)
+            foreground_color: (1, 1, 1, 1)
+
+
+
+        TextInput:
+            id:t3
+            multiline:False
+            font_size: 0.5*self.height
+            input_filter:"int"
+            size:0,20
+            size_hint_y:.3
+            hint_text:"Discount:"
+            background_color:(0,0,0,1)
+            outline_color: (0, 0, 0, 1)
+            foreground_color: (1, 1, 1, 1)
+
+
+
+
+        TextInput:
+            id:t4
+            multiline:False
+            font_size: 0.5*self.height
+            input_filter:"int"
+            size:0,20
+            size_hint_y:.3
+            hint_text:"Budget:"
+            background_color:(0,0,0,1)
+            outline_color: (0, 0, 0, 1)
+            foreground_color: (1, 1, 1, 1)
+
+
+
+        Label:
+            canvas:
+                Color:
+                    rgb :.3,.3,.3,.5
+                Rectangle:
+                    pos:self.pos
+                    size:self.size
+            size_hint_y:None
+            size:0,2
+
+        Label:
+            canvas:
+                Color:
+                    rgb :.3,.3,.3,.5
+                Rectangle:
+                    pos:self.pos
+                    size:self.size
+            size_hint_y:None
+            size:0,2
+
+
+
+        Label:
+            id:l1
+            text:"Total Price"
+            size:0,20
+            size_hint_y:.2
+            font_size: 0.7*self.height
+
+        Label:
+            id:l2
+            text:"Budget Left(BL)"
+            size:0,20
+            size_hint_y:.2
+            font_size: 0.7*self.height
+
+        Label:
+            id:l3
+            text:"Status"
+            size:0,20
+            size_hint_y:.2
+            font_size: 0.7*self.height
+        Label:
+            id:l4
+            text:"After Discount(AD)"
+            size:0,20
+            size_hint_y:.2
+            font_size: 0.7*self.height
+
+
+
+
+    Button:
+        text:"Add And Update"
+        size_hint_x:1
+        size_hint_y:.1
+        on_press:root.b1_press()
+        color: (0, 0, 0,1)
+        border : 0, 0, 0, 0
+        background_normal : 'b9.png'
+
+
+
+    Label:
+        canvas:
+            Color:
+                rgb :1,1,1,1
+            Rectangle:
+                pos:self.pos
+                size:self.size
+        size_hint_y:None
+        size:0,1
+
+    Label:
+        canvas:
+            Color:
+                rgb :.3,.3,.3,.5
+            Rectangle:
+                pos:self.pos
+                size:self.size
+        size_hint_y:None
+        size:0,2
+
+
+
+
+
+
+
+
+    GridLayout:
+
+
+        cols:1
+        size_hint_y:1
+
+
+
+
+
+        ScrollView:
+            size:0,root.height
+
+
+
+            GridLayout:
+                size_hint_y:None
+                height: self.minimum_height
+                id:bx
+                cols:1
+                size_hint_y:None
+
+
+
+
+
+
+
+
+
+    BoxLayout:
+        orientation:"horizontal"
+        size_hint_y:.1
+
+
+
+        Button:
+            id:save1
+            text:"Save"
+            color:0,0,0,1
+            on_press:root.save()
+            border : 0, 0, 0, 0
+            background_normal : 'b9.png'
+
+
+
+
+
+        Button:
+            text:"Load"
+            color:0,0,0,1
+            on_press:root.Load()
+            border : 0, 0, 0, 0
+            background_normal : 'b9.png'
+
+
+
+
+
+        Button:
+            id:bd1
+            text:"Delete"
+            color:0,0,0,1
+            on_press:root.del_file()
+            border : 0, 0, 0, 0
+            background_normal : 'b9.png'
+
+
+
+
+
+        Button:
+
+            text:"New"
+            color:0,0,0,1
+            on_press:root.rem_press()
+            border : 0, 0, 0, 0
+            background_normal : 'b9.png'
+    Label:
+        canvas:
+            Color:
+                rgb :1,1,1,1
+            Rectangle:
+                pos:self.pos
+                size:self.size
+        size_hint_y:None
+        size:0,1
+
+    Label:
+        canvas:
+            Color:
+                rgb :.3,.3,.3,.5
+            Rectangle:
+                pos:self.pos
+                size:self.size
+        size_hint_y:None
+        size:0,2
+
+
+
+
+
+
+
+
+

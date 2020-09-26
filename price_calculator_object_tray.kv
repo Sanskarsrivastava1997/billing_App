@@ -1,0 +1,164 @@
+<object_tray>:
+
+    bt1:bt1
+    bt2:bt2
+    tx1:tx1
+    tx2:tx2
+
+
+    cols:1
+
+    size:0,20
+    size_hint_y : None
+
+
+
+    BoxLayout:
+        size:0,20
+        size_hint_y : None
+
+        orientation:"horizontal"
+
+
+
+        Label:
+            canvas:
+                Color:
+                    rgb :.3,.3,.3,.5
+                Rectangle:
+                    pos:self.pos
+                    size:self.size
+            size_hint_x:None
+            size:2,0
+        Label:
+            canvas:
+                Color:
+                    rgb :1,1,1,1
+                Rectangle:
+                    pos:self.pos
+                    size:self.size
+            size_hint_x:None
+            size:1,0
+
+        Label:
+            canvas.before:
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+                    source: 'b11.png'
+            id:tx1
+            text:""
+            font_size: 0.6*self.height
+            size_hint_x:.4
+            font_name:'Verdana'
+
+
+
+
+
+
+
+
+
+
+
+
+        Label:
+            canvas.before:
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+                    source: 'b12.png'
+
+            id:tx2
+            text:""
+            font_size: 0.6*self.height
+            size_hint_x:.4
+            font_name:'Verdana'
+
+
+
+        Label:
+            canvas:
+                Color:
+                    rgb :.3,.3,.3,.5
+                Rectangle:
+                    pos:self.pos
+                    size:self.size
+            size_hint_x:None
+            size:2,0
+        Label:
+            canvas:
+                Color:
+                    rgb :1,1,1,1
+                Rectangle:
+                    pos:self.pos
+                    size:self.size
+            size_hint_x:None
+            size:1,0
+
+        Button:
+            id:bt1
+            text:"+"
+            size_hint_x:.1
+            font_size:self.height
+            border : 0, 0, 0, 0
+            background_normal : 'b9.png'
+            color: (0, 0, 0,1)
+            on_press:root.incr()
+
+
+        Button:
+            id:bt2
+            text:"-"
+            size_hint_x:.1
+            font_size:2*self.height
+            border : 0, 0, 0, 0
+            background_normal : 'b9.png'
+            color: (0, 0, 0,1)
+            on_press:root.decr()
+
+
+
+
+        Label:
+            canvas:
+                Color:
+                    rgb :.3,.3,.3,.5
+                Rectangle:
+                    pos:self.pos
+                    size:self.size
+            size_hint_x:None
+            size:2,0
+        Label:
+            canvas:
+                Color:
+                    rgb :1,1,1,1
+                Rectangle:
+                    pos:self.pos
+                    size:self.size
+            size_hint_x:None
+            size:1,0
+
+    Label:
+        canvas:
+            Color:
+                rgb :.3,.3,.3,.5
+            Rectangle:
+                pos:self.pos
+                size:self.size
+        size_hint_y:None
+        size:0,2
+    Label:
+        canvas:
+            Color:
+                rgb :1,1,1,1
+            Rectangle:
+                pos:self.pos
+                size:self.size
+        size_hint_y:None
+        size:0,1
+
+
+
+
